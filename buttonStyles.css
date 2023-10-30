@@ -1,0 +1,60 @@
+/* buttonStyles.css */
+
+/* Existing button styles */
+
+.button-container {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: fadeOut 0.5s ease-in-out 1s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#startButton {
+    background: linear-gradient(to bottom, #ff002f, #ff008c); /* Pink to white gradient background */
+    color: white; /* Text color white */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#startButton:hover {
+    background: linear-gradient(to bottom, #ff008c, #ff002f); /* Pink to a different shade of white gradient background on hover */
+}
+
+@keyframes hoverEffect {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#textContainer {
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 41%;
+    transform: translate(-50%, 0); /* Combine translateX and translateY */
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    opacity: 0;
+    transition: opacity 1s;
+    animation: hoverEffect 2s infinite; /* Apply the hovering effect */
+}
