@@ -56,6 +56,7 @@
     opacity: 0;
     transition: opacity 1s;
     animation: hoverEffect 2s infinite;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255); /* Text shadow for shades */
 }
 
 @media screen and (max-width: 768px) {
@@ -65,5 +66,23 @@
         left: 5%; /* Adjust the top value to center the text vertically */
         transform: translate(-50%, -50%); /* Center both horizontally and vertically */
         font-size: 70px; /* Adjust the font size for mobile */
+        text-shadow: 2px 2px 4px rgb(255, 255, 255); /* Text shadow for shades */
     }
+}
+
+/* Existing styles */
+
+/* Center text horizontally and vertically */
+.center-text {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 1s;
+    animation: hoverEffect 2s infinite;
 }
